@@ -1,13 +1,10 @@
 package demoqa;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -33,29 +30,31 @@ public class AutopracticeFormTest {
         $(byText("Male")).click();
         $("#userNumber").setValue("9000431111");
 
-        //выбираем календарь и заполняем дд.мм.гг
+        //выбираем календарь и заполняем дд.мм.гг (Не получается победить день в datapicker)
 //        $("#dateOfBirthInput").click();
 //        $(".react-datepicker__month-select").selectOptionByValue("6");
 //        $(".react-datepicker__year-select").selectOptionByValue("1990");
-
-//        Не получается победить день в datapicker
 //        $(".react-datepicker__day").findElement(byText("18")).click();
 
-        //Subjects
+        //Subjects (пока победить не получается)
 //        $(".subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi").setValue("Arts").pressEnter();
+
+        //Picture
 
         //Hobbies
         $(byText("Reading")).click();
         $(byText("Music")).click();
 
+        //Address
+        $("#currentAddress").setValue("Мой адрес не дом и не улица, мой адрес сегодня такой");
 
-        $("[id=currentAddress]").setValue("Мой адрес не дом и не улица, мой адрес сегодня такой");
-
+        //State and City
         $(byText("Select State")).click();
         $(byText("NCR")).click();
         $(byText("Select City")).click();
         $(byText("Delhi")).click();
 
+        //Click Submit
         $(byText("Submit")).click();
 
         //Сравниваем полученное значение
