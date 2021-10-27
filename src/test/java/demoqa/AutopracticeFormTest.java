@@ -64,8 +64,9 @@ public class AutopracticeFormTest {
 
         //Сравниваем полученное значение
         $(".table-responsive").shouldHave(text("Student Name Dmitriy Kochurov"), text("Student Email test@test.ru"),
-                text("Mobile 9000431111"), text("Gender Male"), text("Date of Birth 18 July,1990"), text("Reading, Music"),
-                text("Picture image (6).png"), text("Address Мой адрес не дом и не улица, мой адрес сегодня такой"),
+                text("Mobile 9000431111"), text("Gender Male"), text("Date of Birth 18 July,1990"), text("Subjects Arts"),
+                text("Reading, Music"), text("Picture image (6).png"),
+                text("Address Мой адрес не дом и не улица, мой адрес сегодня такой"),
                 text("State and City NCR Delhi"));
     }
 }
