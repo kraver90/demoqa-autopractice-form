@@ -37,8 +37,8 @@ public class AutopracticeFormTest {
         $(".react-datepicker__year-select").selectOptionByValue("1990");
         $(".react-datepicker__month").findElement(byText("18")).click();
 
-        //Subjects (пока победить не получается, пробовал и через различные классы и через xpath)
-//        $x("//*[@class='subjects-auto-complete__value-container--is-multi']").setValue("Arts").pressEnter();
+        //Subjects
+        $("#subjectsInput").setValue("Arts").pressEnter();
 
         //Picture
         $("input[id=uploadPicture]").uploadFromClasspath("image (6).png");
