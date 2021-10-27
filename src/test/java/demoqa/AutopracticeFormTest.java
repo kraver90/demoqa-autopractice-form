@@ -4,9 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -14,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class AutopracticeFormTest {
 
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         //возможно ли записать в одну строчку? и сделать так чтобы сразу открывался браузер в нужном разрешении?
         Configuration.browser = "Firefox";
         Configuration.browserSize = "1920x1080";
@@ -22,7 +19,7 @@ public class AutopracticeFormTest {
 
 
     @Test
-    void fullFormTest(){
+    void fullFormTest() {
         //заходим на сайт demoqa
         open("https://demoqa.com/automation-practice-form");
 
